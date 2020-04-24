@@ -1,0 +1,31 @@
+﻿<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+	</head>
+
+	<body>
+	<script type="text/javascript" src="./jquery.min.js"></script>
+	<script type="text/javascript" src="./channel.js"></script>
+	<script type="text/javascript">
+
+    var interactiveLog = "";
+
+    window.setInteractiveLog = function (log) {
+	    window.interactiveLog = log;
+        alert(window.interactiveLog);
+    }
+
+	function onInvokeMethodClicked() {
+		onInvokeQtFunction('requestClose', "1");
+    }
+
+	</script>
+
+    <div id="app"></div>
+	<div align="center">
+        <br />
+        <input type="button" value="Invoke Method" onclick="onInvokeMethodClicked()" />
+        <br />
+    </div>
+	</body>
+</html>
