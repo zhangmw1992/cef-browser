@@ -1,4 +1,5 @@
 #include "client_renderer.h"
+#include <qsystemdetection.h>
 
 #ifdef Q_OS_MAC
 #include "include/wrapper/cef_library_loader.h"

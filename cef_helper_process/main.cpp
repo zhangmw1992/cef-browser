@@ -1,11 +1,8 @@
-#ifdef Q_OS_MAC
+#include <qsystemdetection.h>
 
+#ifdef Q_OS_MAC
 #include "include/cef_app.h"
 #include "include/wrapper/cef_library_loader.h"
-<<<<<<< HEAD
-
-=======
->>>>>>> 022c1d0ac275f23cd9950833de38c3d886d675a7
 #include "include/cef_sandbox_mac.h"
 
 // Entry point function for sub-processes.

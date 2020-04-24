@@ -23,7 +23,7 @@ public:
 #ifdef Q_OS_WIN
         RECT rc = { 0 };
         window_info.SetAsChild((CefWindowHandle)pClientWindow_->winId(), rc);
-#elif Q_OS_MAC
+#else
         window_info.SetAsChild((CefWindowHandle)pClientWindow_->winId(), 0, 0, 960, 640);
 #endif
 
@@ -66,14 +66,10 @@ public:
             CefRefPtr<CefBrowser> browser = pClientHandler_->GetBrowser();
             if (browser) {
                 CefRefPtr<CefFrame> frame = browser->GetMainFrame();
-<<<<<<< HEAD
-                if (frame)
-                    frame->ExecuteJavaScript(CefString(data.toStdString()), "", 0);
-=======
+
                 if (frame) {
                     frame->ExecuteJavaScript(CefString(data.toStdString()), "", 0);
                 }
->>>>>>> 022c1d0ac275f23cd9950833de38c3d886d675a7
             }
         }
     }

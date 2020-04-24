@@ -35,7 +35,8 @@ macx {
         $$PWD/../3rdparty/lib-mac/cef/release/include
 
     LIBS += \
-        -L$$PWD/../3rdparty/lib-mac/cef/release/lib -lcef_dll_wrapper -F$$PWD/../3rdparty/lib-mac/cef/release/lib -framework "Chromium Embedded Framework"
+        $$PWD/../3rdparty/lib-mac/cef/release/lib/cef_sandbox.a \
+        -L$$PWD/../3rdparty/lib-mac/cef/release/lib -lcef_dll_wrapper
 
     CONFIG(debug, debug|release) {
         APP_PATH = $$PWD/../bin/macx/debug

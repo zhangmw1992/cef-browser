@@ -283,15 +283,9 @@ bool ClientHandler::DispatchNotifyRequest(CefRefPtr<CefBrowser> browser,
     if (message->GetName() != INVOKEMETHOD_NOTIFY_MESSAGE) {
         return false;
     }
-<<<<<<< HEAD
-
-    CefRefPtr<CefListValue> messageArguments = message->GetArgumentList();
-    if (messageArguments && (messageArguments->GetSize() < 2)) {
-=======
    
     CefRefPtr<CefListValue> messageArguments = message->GetArgumentList();
     if (!messageArguments && (messageArguments->GetSize() < 2)) {
->>>>>>> 022c1d0ac275f23cd9950833de38c3d886d675a7
         return false;
     }
 

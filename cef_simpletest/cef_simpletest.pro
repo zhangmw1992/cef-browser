@@ -1,4 +1,4 @@
-QT       += core gui
+QT       += core gui widgets
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -41,7 +41,7 @@ macx {
 
     LIBS += \
           $$PWD/../3rdparty/lib-mac/cef/release/lib/cef_sandbox.a \
-        -L$$PWD/../3rdparty/lib-mac/cef/release/lib -lcef_dll_wrapper -F$$PWD/../../3rdparty/lib-mac/cef/release/lib -framework "Chromium Embedded Framework" \
+        -L$$PWD/../3rdparty/lib-mac/cef/release/lib -lcef_dll_wrapper -F$$PWD/../3rdparty/lib-mac/cef/release/lib -framework "Chromium Embedded Framework" \
         -L$$PWD/../3rdparty/lib-mac/webview/release/lib -lweb_view
 
     CONFIG(debug, debug|release) {

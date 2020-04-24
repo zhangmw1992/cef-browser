@@ -35,7 +35,7 @@ win32 {
 
 macx {
     INCLUDEPATH += \
-        $$PWD/../3rdparty/lib-mac/cef/include
+        $$PWD/../3rdparty/lib-mac/cef/release/include
 
     LIBS += \
         $$PWD/../3rdparty/lib-mac/cef/release/lib/cef_sandbox.a \
